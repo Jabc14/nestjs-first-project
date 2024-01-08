@@ -6,7 +6,10 @@ const suma = (a: number, b: number) => {
 suma(12, 23);
 
 class Persona {
-  constructor(private age: number, private name: string) {}
+  constructor(
+    private age: number,
+    private name: string,
+  ) {}
 
   getSummary() {
     return `my name is ${this.name}, ${this.age}`;
