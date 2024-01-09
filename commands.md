@@ -17,3 +17,11 @@ nest g s "path" --flat
 # Para crear controladores
 
 nest g co "path" --flat
+
+# Para crear módulos
+
+nest g mo "file-name"
+
+# Para crear guardianes
+
+nest g gu "path" --flat
