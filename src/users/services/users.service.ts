@@ -1,23 +1,21 @@
 import { Injectable, NotFoundException, Inject } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Client } from 'pg';
 import * as bcrypt from 'bcrypt';
 
-import { ProductsService } from './../../products/services/products.service';
 import { CustomersService } from './customers.service';
 import { CreateUserDto, UpdateUserDto } from '../dtos/user.dto';
 import { User } from '../entities/user.entity';
+import { Order } from '../entities/order.entity';
 
 @Injectable()
 export class UsersService {
   constructor(
-    private productsService: ProductsService,
-    private configService: ConfigService,
     @Inject('PG') private clientPg: Client,
     //InjectRepository para los servicios de relaciones de base de datos
     @InjectRepository(User) private userRepo: Repository<User>,
+    @InjectRepository(Order) private orderRepo: Repository<Order>,
     private customersService: CustomersService,
   ) {}
 

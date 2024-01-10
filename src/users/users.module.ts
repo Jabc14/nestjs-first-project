@@ -15,6 +15,7 @@ import { OrdersController } from './controllers/orders.controller';
 import { OrderProductService } from './services/order-product.service';
 import { OrderProductController } from './controllers/order-product.controller';
 // import { Product } from 'src/products/entities/product.entity';
+import { ProfileController } from './controllers/profile.controller';
 
 @Module({
   //Insertar en TypeOrmModule.forFeature las entidades que se van a relacionar
@@ -27,6 +28,7 @@ import { OrderProductController } from './controllers/order-product.controller';
     UsersController,
     OrdersController,
     OrderProductController,
+    ProfileController,
   ],
   providers: [
     CustomersService,

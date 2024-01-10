@@ -20,16 +20,11 @@ export class AppController {
   @Public()
   @Get('nuevo')
   newEndpoint() {
-    return 'yo soy nuevo';
+    return 'endpoint nuevo';
   }
 
   @Get('/ruta/')
   hello() {
-    return 'con /sas/';
-  }
-
-  @Get('tasks')
-  tasks() {
-    return this.appService.getTasks();
+    return 'endpoint saluda';
   }
 }
